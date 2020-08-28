@@ -59,3 +59,22 @@
 .hud-main-text {
   text-align: center;
 }
+
+#progressBar {
+  width: 20rem;
+  height: 4rem;
+  border: 0.3rem solid #a3097e;
+  margin-top: 1.5rem;
+}
+
+#progressBarFull {
+  height: 3.4rem;
+  background: repeating-linear-gradient(
+  45deg,
+  #b53a97,
+  #b53a97 10px,
+  #51043f 10px,
+  #51043f 20px
+);
+  width: 0%;
+}
