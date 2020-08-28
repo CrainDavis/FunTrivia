@@ -114,8 +114,24 @@ h3 {
   animation-duration: 0.5s;
 }
 
+@keyframes btnDisabled {
+  0% {
+    color: #a3097e;
+    background-color: #f5e6f2;
+  }
+  100% {
+    color: #a3097e;
+    background-color: #f5e6f2;
+  }
+}
+
 .btn[disabled]:hover {
+  color: #a3097e;
+  background-color: #f5e6f2;
+  border: 0.1rem solid #a3097e;
   cursor: not-allowed;
   box-shadow: none;
   transform: none;
+  animation-name: btnDisabled;
+  animation-duration: 0.5s;
 }

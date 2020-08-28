@@ -5,14 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/all-pages.css">
+    <link rel="stylesheet" href="css/end.css">
     <title>Random Trivia App | END</title>
 </head>
 
 <body>
     <div class="container">
-        <h1>END PAGE</h1>
-        <h4>coming soon...</h4>
+        <div id="end" class="flex-center flex-column">
+            <h1 id="finalScore"></h1>
+            <form>
+                <input type="text" name="username" id="username" placeholder="username">
+                <button id="saveScoreBtn" type="submit" class="btn" onclick="saveHighScore(event)" disabled>SAVE</button>
+            </form>
+            <a class="btn" href="/game.html">PLAY AGAIN</a>
+            <a class="btn" href="/">GO HOME</a>
+        </div>
     </div>
+
+    <script src="js/end.js"></script>
 </body>
 
 </html>
