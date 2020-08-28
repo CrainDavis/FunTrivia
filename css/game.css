@@ -7,25 +7,39 @@
   margin-bottom: 0.5rem;
   width: 100%;
   font-size: 1.8rem;
-  border: 0.1rem solid #f23883;
-  background-color: #fdebf2;
+  border: 0.1rem solid #a3097e;
+  background-color: #f5e6f2;
 }
 
 .choice-container:hover {
   cursor: pointer;
   box-shadow: 0 0.4rem 1.4rem 0 #939091;
-  border: 0.1rem solid #fdebf2;
+  border: 0.1rem solid #f5e6f2;
 }
 
 .choice-prefix {
   padding: 1.5rem 2.5rem;
-  color: #fdebf2;
-  background-color: #f23883;
+  color: #f5e6f2;
+  background-color: #a3097e;
   font-weight: bold;
 }
 
 .choice-text {
   padding: 1.5rem;
-  color: #f23883;
+  color: #a3097e;
   width: 100%;
+}
+
+/* ============================================================= */
+
+.correct {
+    background-color: #ccf4c6;
+    color: #28a515;
+    font-weight: bold;
+}
+
+.incorrect {
+    background-color: #f9d4d4;
+    color: #e52929;
+    font-weight: bold;
 }
