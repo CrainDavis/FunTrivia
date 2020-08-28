@@ -1,5 +1,6 @@
 const highScoresList = document.getElementById("highScoresList");
 const noScores = document.getElementById("noScores");
+const clearScores = document.getElementById("clearBtn");
 
 // ================================================================
 
@@ -19,3 +20,11 @@ if (highScores.length < 1) {
     })
     .join("");
 }
+
+clearScores.addEventListener("click", function (event) {
+  event.preventDefault();
+  localStorage.clear();
+  highScoresList.classList.add("hidden");
+  noScores.classList.remove("hidden");
+  highScoresList.innerHTML = [];
+});
