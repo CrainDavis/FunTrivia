@@ -3,12 +3,14 @@ const choices = Array.from(document.getElementsByClassName("choice-text"));
 const progressText = document.getElementById("progressText");
 const progressBarFull = document.getElementById("progressBarFull");
 const scoreText = document.getElementById("score");
+const timeElement = document.getElementById("countdownTimer");
 
 // ================================================================
 
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
+let timeLeft = 61;
 let questionCounter = 0;
 let availableQuestions = [];
 
@@ -142,12 +144,15 @@ choices.forEach((choice) => {
     if (!acceptingAnswers) return;
 
     acceptingAnswers = false;
-
     const selectedChoice = event.target;
     const selectedAnswer = selectedChoice.dataset["number"];
 
-    const classToApply =
-      selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+    let classToApply = "incorrect";
+    if (selectedAnswer == currentQuestion.answer) {
+      classToApply = "correct";
+    } else {
+      timePenalty();
+    }
 
     if (classToApply === "correct") {
       incrementScore(CORRECT_BONUS);
@@ -167,4 +172,23 @@ incrementScore = (num) => {
   scoreText.innerText = score;
 };
 
+setTime = () => {
+  let timerInterval = setInterval(function() {
+    timeLeft--;
+    timeElement.textContent = timeLeft;
+
+    if (timeLeft === 0) {
+      clearInterval(timerInterval);
+      return window.location.assign("/gameover.html");
+    }
+  }, 1000);
+};
+
+function timePenalty() {
+  timeLeft = timeLeft - 4;
+};
+
+// ================================================================
+
 startGame();
+setTime();
