@@ -1,5 +1,5 @@
 .question {
-    text-align: center;
+  text-align: center;
 }
 
 .choice-container {
@@ -33,13 +33,29 @@
 /* ============================================================= */
 
 .correct {
-    background-color: #ccf4c6;
-    color: #28a515;
-    font-weight: bold;
+  background-color: #ccf4c6;
+  color: #28a515;
+  font-weight: bold;
 }
 
 .incorrect {
-    background-color: #f9d4d4;
-    color: #e52929;
-    font-weight: bold;
+  background-color: #f9d4d4;
+  color: #e52929;
+  font-weight: bold;
+}
+
+/* ============================================================= */
+
+#hud {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hud-prefix {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.hud-main-text {
+  text-align: center;
 }
