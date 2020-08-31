@@ -20,16 +20,19 @@ let availableQuestions = [];
 
 let questions = [];
 
-fetch("https://opentdb.com/api.php?amount=10&type=multiple")
+fetch("https://opentdb.com/api.php?amount=10&type=multiple&encode=base64")
   .then((res) => {
     return res.json();
   })
   .then((loadedQuestions) => {
-    console.log(loadedQuestions.results);
+    function formatText(text) {
+      var fixedText = window.atob(text);
+      return fixedText;
+    }
 
     questions = loadedQuestions.results.map((ques) => {
       const formattedQuestion = {
-        question: ques.question,
+        question: formatText(ques.question),
       };
 
       const answerChoices = [...ques.incorrect_answers];
@@ -41,7 +44,7 @@ fetch("https://opentdb.com/api.php?amount=10&type=multiple")
       );
 
       answerChoices.forEach((choice, index) => {
-        formattedQuestion["choice" + (index + 1)] = choice;
+        formattedQuestion["choice" + (index + 1)] = formatText(choice);
       });
 
       return formattedQuestion;
