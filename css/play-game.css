@@ -70,11 +70,35 @@
 #progressBarFull {
   height: 3.4rem;
   background: repeating-linear-gradient(
-  45deg,
-  #b53a97,
-  #b53a97 10px,
-  #51043f 10px,
-  #51043f 20px
-);
+    45deg,
+    #b53a97,
+    #b53a97 10px,
+    #51043f 10px,
+    #51043f 20px
+  );
   width: 0%;
+}
+
+/* ============================================================= */
+
+#loader {
+  border: 1.6rem solid white;
+  border-radius: 50%;
+  border-top: 1.6rem solid #a3097e;
+  width: 12rem;
+  height: 12rem;
+  animation: spin 1s linear infinite;
+}
+
+.loader {
+  margin: auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

@@ -4,6 +4,8 @@ const progressText = document.getElementById("progressText");
 const progressBarFull = document.getElementById("progressBarFull");
 const scoreText = document.getElementById("score");
 const timeElement = document.getElementById("countdownTimer");
+const loader = document.getElementById("loader");
+const game = document.getElementById("playArea");
 
 // ================================================================
 
@@ -18,9 +20,7 @@ let availableQuestions = [];
 
 let questions = [];
 
-fetch(
-  "https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple"
-)
+fetch("https://opentdb.com/api.php?amount=10&type=multiple")
   .then((res) => {
     return res.json();
   })
@@ -66,6 +66,9 @@ startGame = () => {
   score = 0;
   availableQuestions = [...questions];
   getNewQuestion();
+
+  game.classList.remove("hidden");
+  loader.classList.add("hidden");
 };
 
 getNewQuestion = () => {
