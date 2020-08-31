@@ -34,5 +34,5 @@ saveHighScore = (event) => {
   highScores.splice(10);
   localStorage.setItem("highScores", JSON.stringify(highScores));
 
-  window.location.assign("/FunTrivia/view-highscores.html");
+  window.location.href("https://craindavis.github.io/FunTrivia/view-highscores.html");
 };

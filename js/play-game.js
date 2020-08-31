@@ -77,7 +77,7 @@ startGame = () => {
 getNewQuestion = () => {
   if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
     localStorage.setItem("mostRecentScore", score);
-    return window.location.assign("/FunTrivia/submit-scores.html");
+    return window.location.href("https://craindavis.github.io/FunTrivia/submit-scores.html");
   }
 
   questionCounter++;
@@ -137,7 +137,7 @@ setTime = () => {
 
     if (timeLeft === 0) {
       clearInterval(timerInterval);
-      return window.location.assign("/FunTrivia/game-over.html");
+      return window.location.href("https://craindavis.github.io/FunTrivia/game-over.html");
     }
   }, 1000);
 };
