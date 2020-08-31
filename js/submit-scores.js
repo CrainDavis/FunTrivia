@@ -34,5 +34,5 @@ saveHighScore = (event) => {
   highScores.splice(10);
   localStorage.setItem("highScores", JSON.stringify(highScores));
 
-  window.location.pathname("../view-highscores.html");
+  window.location.pathname("/view-highscores.html");
 };
