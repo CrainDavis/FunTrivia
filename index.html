@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/all-pages.css">
+    <link rel="stylesheet" href="css/index.css">
     <title>Random Trivia App | HOME</title>
 </head>
 
@@ -12,8 +13,16 @@
     <div class="container">
         <div id="home" class="flex-center flex-column">
             <h1>Random Trivia Quiz</h1>
-            <a class="btn" href="/FunTrivia/play-game.html">PLAY GAME</a>
-            <a class="btn" href="/FunTrivia/view-highscores.html">VIEW HIGH SCORES</a>
+            <div id="description">
+                <p class="desc-text">Play a quiz of <span class="accent">10 multiple-choice questions</span> from the
+                    <span class="accent">Open Trivia Database</span>, record
+                    you <span class="accent">highest scores</span>, and try to get <span class="accent">100%</span>! But
+                    be careful, as you only have <span class="accent">60 seconds</span> to answer, and
+                    every incorrect choice will cost you <span class="accent">5 seconds</span> of play time. Good luck!
+                </p>
+            </div>
+            <a class="btn" href="/play-game.html">PLAY GAME</a>
+            <a class="btn" href="/view-highscores.html">VIEW HIGH SCORES</a>
         </div>
     </div>
 </body>
