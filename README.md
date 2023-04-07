@@ -36,12 +36,3 @@ Click on [this link](https://craindavis.github.io/FunTrivia/) to play!
 * [James Q Quick -- "Build a Quiz App with HTML, CSS, and JavaScript"](https://www.youtube.com/playlist?list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx)
 * [Open Trivia Database](https://opentdb.com/)
 * ["Encoding issues in questions/answers"](https://forums.pixeltailgames.com/t/encoding-issues-in-questions-answers/34751)
-
----
-
-## Questions
-For any questions, please contact:
-
-![CrainDavis](https://avatars0.githubusercontent.com/u/59345254?v=4) 
-
-__[CrainDavis](https://github.com/CrainDavis)__ at chyna.davis11@gmail.com
